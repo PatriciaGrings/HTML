@@ -8,27 +8,40 @@
     <style>
         body {
             height: 100vh;
-            background-color: black;
-            background-image: url('imagens/wallpaper002.jpg');
-            background-position: center top;
-            background-repeat: no-repeat;
             background-size: cover;
+            background: black url(imagens/wallpaper002.jpg) center center no-repeat fixed;
         }
-        main {
+        #container {
+            position: relative;
             background-color: white;
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
             width: 400px;
+            height: 500px;
             padding: 10px;
-            margin: auto;
             border: 2px solid black;
             border-radius: 20px;
         }
+
+        #conteudo {
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            text-align: justify;
+        }
+
     </style>
 
 </head>
 <body>
-    <main>
-        <h1>Teste de Imagem de Fundo</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dignissimos minus molestiae autem laudantium asperiores possimus libero, natus quibusdam animi. Perferendis praesentium porro placeat corrupti consequatur amet fuga. Temporibus, asperiores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni obcaecati consequuntur doloremque, sequi labore iusto ab eius eaque mollitia. Unde culpa numquam praesentium quo quaerat illo non, minus ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, suscipit libero! Nihil veritatis quae sed ad repellat, aspernatur voluptates, quidem quas dolorum facere minus temporibus quaerat veniam nostrum eaque harum.</p>
-    </main>
+    <section id="container">
+        <article id="conteudo">
+            <h1>Teste de Imagem de Fundo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dignissimos minus molestiae autem laudantium asperiores possimus libero, natus quibusdam animi. Perferendis praesentium porro placeat corrupti consequatur amet fuga. Temporibus, asperiores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit magni obcaecati consequuntur doloremque, sequi labore iusto ab eius eaque mollitia. Unde culpa numquam praesentium quo quaerat illo non, minus ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, suscipit libero! Nihil veritatis quae sed ad repellat, aspernatur voluptates, quidem quas dolorum facere minus temporibus quaerat veniam nostrum eaque harum.</p>
+        </article>
+    </section>
 </body>
 </html>
