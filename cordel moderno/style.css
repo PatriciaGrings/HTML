@@ -1,9 +1,6 @@
 @charset "UTF-8";
-.sriracha-regular {
-    font-family: "Sriracha", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
   
 
 body {
@@ -15,6 +12,11 @@ header {
     text-align: center;
     height: 200px;
     padding-top: 30px;
+}
+main {
+    font-family: "Sriracha", cursive;
+    font-size: 33px;
+    padding-left: 40px;
 }
 h1 {
     font-family: cursive;
@@ -29,8 +31,50 @@ h1 {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-main {
-    font-family: "Sriracha", cursive;
+p{
+    line-height: 1em;
+}
+.p1{
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.p2{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.p3{
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.p4{
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.p5{
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.p6{
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.p7{
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#container{
+    background-color: rgba(0, 0, 0, 0.164);
+    position: relative;
+    width: 390px;
+    height: 400px;
 }
 footer {
 
