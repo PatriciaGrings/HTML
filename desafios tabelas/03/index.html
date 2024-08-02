@@ -8,6 +8,11 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
+        div#container{
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+        }
         table{
             border-collapse: collapse;
             width: 500px;
@@ -37,80 +42,96 @@
         .numero{
             text-align: center;
         }
+        .containerBotão{
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        #btnInserir{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: gray;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.418);
+            border: none;
+        }
+        #btnInserir:hover{
+            background-color: rgb(109, 100, 100);
+        }
     </style>
 </head>
 <body>
-    <table>
-        <caption>Notas</caption>
-        <tr>
-            <th rowspan="2" scope="col">Áreas</th>
-            <th rowspan="2" scope="col">Disciplinas</th>
-            <th colspan="2" scope="colgroup">Notas</th>
-            <th rowspan="2" scope="col">Médias</th>
-        </tr>
-        <tr>
-            <th scope="col">Nota 1</th>
-            <th scope="col">Nota 2</th>
-        </tr>
-        <tr>
-            <td rowspan="4" class="negrito">Exatas</td>
-            <td>Matemática</td>
-            <td class="numero" id="nota1">0.0</td>
-            <td class="numero" id="nota2">0.0</td>
-            <td class="numero" id="notaMed1">0.0</td>
-        </tr>
-        <tr>
-            <td>Física</td>
-            <td class="numero" id="nota3">0.0</td>
-            <td class="numero" id="nota4">0.0</td>
-            <td class="numero" id="notaMed2">0.0</td>
-        </tr>
-        <tr>
-            <td>Química</td>
-            <td class="numero" id="nota5">0.0</td>
-            <td class="numero" id="nota6">0.0</td>
-            <td class="numero" id="notaMed3">0.0</td>
-        </tr>
-        <tr>
-            <td>Biologia</td>
-            <td class="numero" id="nota7">0.0</td>
-            <td class="numero" id="nota8">0.0</td>
-            <td class="numero" id="notaMed4">0.0</td>
-        </tr>
-        <tr>
-            <th colspan="4" class="cinza" style="text-align: left;" scope="row">Média de Exatas</th>
-            <td class="cinza" style="text-align: center;">0.0</td>
-        </tr>
-        <tr>
-            <td rowspan="3" class="negrito">Humanas</td>
-            <td>História</td>
-            <td class="numero" id="nota9">0.0</td>
-            <td class="numero" id="nota10">0.0</td>
-            <td class="numero" id="notaMed5">0.0</td>
-        </tr>
-        <tr>
-            <td>Geografia</td>
-            <td class="numero" id="nota11">0.0</td>
-            <td class="numero" id="nota12">0.0</td>
-            <td class="numero" id="notaMed6">0.0</td>
-        </tr>
-        <tr>
-            <td>Português</td>
-            <td class="numero" id="nota13">0.0</td>
-            <td class="numero" id="nota14">0.0</td>
-            <td class="numero" id="notaMed7">0.0</td>
-        </tr>
-        <tr>
-            <th colspan="4" class="cinza" style="text-align: left;">Média de Humanas</th>
-            <td class="cinza" style="text-align: center;">0.0</td>
-        </tr>
-    </table>
+    <div id="container">
+        <table>
+            <caption>Notas</caption>
+            <tr>
+                <th rowspan="2" scope="col">Áreas</th>
+                <th rowspan="2" scope="col">Disciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Médias</th>
+            </tr>
+            <tr>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+            </tr>
+            <tr>
+                <td rowspan="4" class="negrito">Exatas</td>
+                <td>Matemática</td>
+                <td class="numero" id="nota1">0.0</td>
+                <td class="numero" id="nota2">0.0</td>
+                <td class="numero" id="notaMed1">0.0</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td class="numero" id="nota3">0.0</td>
+                <td class="numero" id="nota4">0.0</td>
+                <td class="numero" id="notaMed2">0.0</td>
+            </tr>
+            <tr>
+                <td>Química</td>
+                <td class="numero" id="nota5">0.0</td>
+                <td class="numero" id="nota6">0.0</td>
+                <td class="numero" id="notaMed3">0.0</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td class="numero" id="nota7">0.0</td>
+                <td class="numero" id="nota8">0.0</td>
+                <td class="numero" id="notaMed4">0.0</td>
+            </tr>
+            <tr>
+                <th colspan="4" class="cinza" style="text-align: left;" scope="row">Média de Exatas</th>
+                <td class="cinza" id="notaMedEx" style="text-align: center;">0.0</td>
+            </tr>
+            <tr>
+                <td rowspan="3" class="negrito">Humanas</td>
+                <td>História</td>
+                <td class="numero" id="nota9">0.0</td>
+                <td class="numero" id="nota10">0.0</td>
+                <td class="numero" id="notaMed5">0.0</td>
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td class="numero" id="nota11">0.0</td>
+                <td class="numero" id="nota12">0.0</td>
+                <td class="numero" id="notaMed6">0.0</td>
+            </tr>
+            <tr>
+                <td>Português</td>
+                <td class="numero" id="nota13">0.0</td>
+                <td class="numero" id="nota14">0.0</td>
+                <td class="numero" id="notaMed7">0.0</td>
+            </tr>
+            <tr>
+                <th colspan="4" class="cinza" style="text-align: left;">Média de Humanas</th>
+                <td class="cinza" id="notaMedHum" style="text-align: center;">0.0</td>
+            </tr>
+        </table>
+    </div>
 
-    <form>
-        <!--<p>Insira a nota: </p>
-        <input type="text" id="nota">-->
-        <button type="button" onclick="substituirNotas()">Inserir Notas</button>
-        <button type="button" onclick="substituirMedias()">Calcular Médias</button>
+    <form class="containerBotão">
+        <button type="button" id="btnInserir" onclick="substituirNotas()">Inserir Notas</button>
     </form>
 </body>
 <script src="tabela.js"></script>
