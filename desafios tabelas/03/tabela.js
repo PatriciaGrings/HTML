@@ -1,14 +1,32 @@
 var vetorNotas = []
-function notas() {
-    for (var c= 1; c<3; c++){
-        var n1= window.prompt('nota: ')
-        var n2= Number.parseFloat(n1)
-        vetorNotas.push(n2)
+var contNota = 1
+var contVet = 0
+var contMed = 0
+function substituirNotas() {
+    if (contNota <= 4) {    
+        var notaInfo= window.prompt('Insira a nota: ')
+        var notaNum= Number.parseFloat(notaInfo)
+        vetorNotas.push(notaNum)
+        var n1Mat= document.getElementById('nota' + contNota)
+        n1Mat.innerText= vetorNotas[contVet]
+        /*window.alert(vetorNotas[contVet])*/
+
+        contNota ++
+        contVet ++
     }
-    var n1Mat= document.getElementById('mat1')
-        n1Mat.innerText= vetorNotas[0]
-        window.alert(vetorNotas[0])
-        var n2Mat= document.getElementById('mat2')
-        n2Mat.innerText= vetorNotas[1]
-        window.alert(vetorNotas[1])         
+    if (contVet >= 4) {
+    for (var c=1;c<=3;c++){
+        window.alert(vetorNotas[contMed])
+        window.alert(vetorNotas[contMed+1])
+        var medNota= (vetorNotas[contMed]+vetorNotas[contMed+1])/2
+        var med= document.getElementById('notaMed' + c)
+        med.innerText= medNota
+        contMed= contMed+2
+    }
 }
+}
+
+
+document.getElementById('notaForm').addEventListener('submit', function(event) {
+    event.preventDefault()
+})

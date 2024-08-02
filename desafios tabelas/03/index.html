@@ -55,27 +55,27 @@
         <tr>
             <td rowspan="4" class="negrito">Exatas</td>
             <td>Matemática</td>
-            <td class="numero" id="mat1">0.0</td>
-            <td class="numero" id="mat2">0.0</td>
-            <td class="numero" id="matMed">0.0</td>
+            <td class="numero" id="nota1">0.0</td>
+            <td class="numero" id="nota2">0.0</td>
+            <td class="numero" id="notaMed1">0.0</td>
         </tr>
         <tr>
             <td>Física</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
+            <td class="numero" id="nota3">0.0</td>
+            <td class="numero" id="nota4">0.0</td>
+            <td class="numero" id="notaMed2">0.0</td>
         </tr>
         <tr>
             <td>Química</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
+            <td class="numero" id="nota5">0.0</td>
+            <td class="numero" id="nota6">0.0</td>
+            <td class="numero" id="notaMed3">0.0</td>
         </tr>
         <tr>
             <td>Biologia</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
+            <td class="numero" id="nota7">0.0</td>
+            <td class="numero" id="nota8">0.0</td>
+            <td class="numero" id="notaMed4">0.0</td>
         </tr>
         <tr>
             <th colspan="4" class="cinza" style="text-align: left;" scope="row">Média de Exatas</th>
@@ -84,21 +84,21 @@
         <tr>
             <td rowspan="3" class="negrito">Humanas</td>
             <td>História</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
+            <td class="numero" id="nota9">0.0</td>
+            <td class="numero" id="nota10">0.0</td>
+            <td class="numero" id="notaMed5">0.0</td>
         </tr>
         <tr>
             <td>Geografia</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
+            <td class="numero" id="nota11">0.0</td>
+            <td class="numero" id="nota12">0.0</td>
+            <td class="numero" id="notaMed6">0.0</td>
         </tr>
         <tr>
             <td>Português</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
-            <td class="numero">0.0</td>
+            <td class="numero" id="nota13">0.0</td>
+            <td class="numero" id="nota14">0.0</td>
+            <td class="numero" id="notaMed7">0.0</td>
         </tr>
         <tr>
             <th colspan="4" class="cinza" style="text-align: left;">Média de Humanas</th>
@@ -107,9 +107,10 @@
     </table>
 
     <form>
-        <p>Insira a nota: </p>
-        <input type="text" id="nota">
-        <button onclick="notas()">Enviar</button>
+        <!--<p>Insira a nota: </p>
+        <input type="text" id="nota">-->
+        <button type="button" onclick="substituirNotas()">Inserir Notas</button>
+        <button type="button" onclick="substituirMedias()">Calcular Médias</button>
     </form>
 </body>
 <script src="tabela.js"></script>
