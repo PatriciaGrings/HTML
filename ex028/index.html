@@ -13,18 +13,74 @@
 <body>
     <h1>Meu primeiro formulário</h1>
     <form action="cadastro.php" autocomplete="on" method="post">
-        <p>
-            <label for="inome">Nome: </label>
-            <input type="text" name="nome" id="inome" autocomplete="name" placeholder="Nome" required>
-        </p>
-        <p>
-            <label for="isobrenome">Sobrenome: </label>
-            <input type="text" name="sobrenome" id="isobrenome" autocomplete="family-name" placeholder="Sobrenome" required>
-        </p>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome" autocomplete="name" placeholder="Nome" required>
+            </p>
+            <p>
+                <label for="isobrenome">Sobrenome: </label>
+                <input type="text" name="sobrenome" id="isobrenome" autocomplete="family-name" placeholder="Sobrenome" required>
+            </p>
+            <p>
+                <label for="iemail">E-mail:</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel-local" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxx-xxxx" required>
+            </p>
+            <p>
+                <label for="iprof">Profissão:</label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option>Administrador</option>
+                    <option>Contabilista</option>
+                    <option>Desenvolvedor</option>
+                    <option>Professor</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="iest">Estado:</label>
+                <select name="est" id="iest">
+                    <optgroup label="Região Sudeste">
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP" selected>São Paulo</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="ifot">Foto do Perfil:</label>
+                <input type="file" name="fot" id="ifot">
+            </p>
+        </fieldset>
         <P>
-            <label for="inota">Nota:</label>
-            <input type="number" name="nota" id="inota" min="0" max="10" step="0.1" required>
+            <label for="inota1">Nota 1:</label>
+            <input type="number" name="nota1" id="inota1" min="0" max="10" step="0.1" required oninput="imed.innerHTML= (Number(inota1.value)+Number(inota2.value))/2">
+            <label for="inota2">Nota 2:</label>
+            <input type="number" name="nota2" id="inota2" min="0" max="10" step="0.1" required oninput="imed.innerHTML= (Number(inota1.value)+Number(inota2.value))/2">
+            <label for="imed">Média:</label>
+            <output name="med" id="imed">0</output>
         </P>
+        <p>
+            <label>Aprovado:</label>
+            <input type="radio" name="aprov" id="iaprov" value="S"> <label for="iaprov">Sim</label>
+            <input type="radio" name="aprov" id="ireprov" value="N"> <label for="ireprov">Não</label>
+        </p>
+        <p>
+            <label>Discilplinas:</label>
+            <input type="checkbox" name="mat" id="imat"> <label for="imat">Matemática</label>
+            <input type="checkbox" name="fis" id="ifis"> <label for="ifis">Física</label>
+            <input type="checkbox" name="qui" id="iqui"> <label for="iqui">Química</label>
+            <input type="checkbox" name="por" id="ipor"> <label for="ipor">Português</label>
+        </p>
+        <p>
+            <label for="isat">Nível de Satisfação:</label>
+            <input type="range" name="sat" id="isat" min="0" max="10" value="5" oninput="isatis.innerHTML= Number(isat.value)">
+            <output name="satis" id="isatis" oninput="">5</output>
+        </p>
         <p>
             <label for="imes">Período Letivo: </label>
             <input type="month" name="mes" id="imes" required>
@@ -33,6 +89,9 @@
             <label for="ihora">Horário da Prova:</label>
             <input type="time" name="hora" id="ihora" required>
         </p>
+        <p>
+            <label for="imsg">Mensagem:</label></p>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Escreva sua Mensagem"></textarea>
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
