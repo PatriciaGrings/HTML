@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html, body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            width: 100vw;
+            height: 100vh;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: #233eff;
+        }
+        header{
+            background-color: gainsboro;
+            margin-bottom: 25px;
+        }
+        li{
+            display: inline-block;
+            padding: 10px;
+            font-weight: bold;
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        article{
+            width: 600px;
+            display: block;
+            margin: auto;
+            text-align: justify;
+        }
+
+        @media screen and (orientation: portrait) {
+            body{
+                background-image: url(../../ex029/imagens/cev-portrait.jpg);
+                background-position: center bottom;
+            }
+        }
+        
+        @media screen and (orientation: landscape) {
+            body{
+                background-image: url(../../ex029/imagens/cev-landscape.jpg);
+                background-position: left bottom;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notícias</h1>
+        <menu>
+            <ul>
+                <li>Esportes</li>
+                <li>Política</li>
+                <li>Tecnologia</li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Estou aprendendo a criar Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam eius reprehenderit provident, magni, ipsum nihil voluptate laudantium eveniet vel accusamus odit? Delectus provident quisquam, quidem fuga odit voluptatem eveniet ducimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas dolorem, magni repudiandae sequi, magnam dolores at doloremque sit eligendi dolorum optio animi? Aut et impedit odio provident labore, reprehenderit deleniti?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quod pariatur maiores sint quos tempore est atque temporibus consectetur illo, autem quia et incidunt itaque dolorem odio odit fugit impedit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis commodi blanditiis eius fugiat aliquid? Soluta deleniti sed quas ipsa vel facilis eligendi at, consectetur vero, commodi dolorum, pariatur fugit quisquam.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita placeat sequi eaque eligendi mollitia natus molestiae animi, soluta nesciunt voluptas officia, autem, architecto ipsa doloremque et delectus ipsum. Necessitatibus, dolorum.</p>
+        </article>
+    </main>
+</body>
+</html>
