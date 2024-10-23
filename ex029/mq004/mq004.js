@@ -8,3 +8,11 @@ function clickMenu() {
         itensJs.style.display = 'block'
     }
 }
+
+function mudouTamanho() {
+    if (window.innerWidth >= 768)
+        itensJs.style.display = 'block'
+    else {
+        itensJs.style.display = 'none'
+    }
+}
